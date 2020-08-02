@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import MenuNav from "./components/MenuNav/MenuNav";
-import Menu from "./components/Menu/Menu";
+import MenuNav from "../components/MenuNav/MenuNav";
+import Menu from "../components/Menu/Menu";
 import "./App.css";
 
 class App extends Component {
