@@ -1,0 +1,39 @@
+.menu-item {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: repeat(2, 1fr);
+    align-items: flex-start;
+    justify-content: space-between;
+    grid-gap: 0.5rem;
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+}
+.menu-item-id,
+.menu-item-title,
+.menu-item-price {
+    font-weight: bold;
+}
+.menu-item-id,
+.menu-item-title,
+.menu-item-description {
+    text-align: left;
+}
+
+.menu-item-id {
+    min-width: 3rem;
+    order: 1;
+    grid-column: 1/2;
+}
+.menu-item-title {
+    order: 2;
+    grid-column: 2/3;
+}
+.menu-item-description {
+    order: 4;
+    grid-column: 2/3;
+}
+.menu-item-price {
+    text-align: right;
+    order: 3;
+    grid-column: 3/4;
+}

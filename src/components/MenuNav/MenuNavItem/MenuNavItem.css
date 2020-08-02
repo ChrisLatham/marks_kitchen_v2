@@ -1,0 +1,12 @@
+.menu-nav-item {
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 0.5rem 1rem 3rem 1rem;
+    border-radius: 0.5rem;
+    width: 65%;
+    margin: 1rem 0.5rem;
+    border: none;
+    display: inline-block;
+    background: #fff;
+    scroll-snap-align: center;
+}

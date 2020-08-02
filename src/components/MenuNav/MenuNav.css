@@ -1,0 +1,7 @@
+.menu-nav {
+    background: darkgray;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 0 0.5rem;
+    scroll-snap-type: x mandatory;
+}

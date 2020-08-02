@@ -1,26 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import MenuNav from "./components/MenuNav/MenuNav";
+import Menu from "./components/Menu/Menu";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  state = {
+    selection: "Starters",
+  };
+  handleMenuNavClick = (selection) => {
+    this.setState({
+      selection: selection,
+    });
+  };
+  render() {
+    return (
+      <div className="container">
+        <header className="header">
+          <div className="header-nav">Mark's Kitchen</div>
+          <div className="header-menu-nav">
+            <MenuNav menuNavClick={this.handleMenuNavClick} />
+          </div>
+          <div className="header-cart">Total: £0.00</div>
+        </header>
+        <section className="menu">
+          <Menu current={this.state.selection} />
+        </section>
+      </div>
+    );
+  }
 }
 
 export default App;
