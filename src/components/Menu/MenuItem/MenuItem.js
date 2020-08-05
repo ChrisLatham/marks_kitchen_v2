@@ -1,10 +1,12 @@
 import React from "react";
-import "./MenuItem.css";
+import styles from "./MenuItem.module.css";
 
 const menuItem = ({ id, title, description, price }) => {
   let divDescription = null;
   if (description !== "") {
-    divDescription = <div className="menu-item-description">{description}</div>;
+    divDescription = (
+      <div className={styles.menuItemDescription}>{description}</div>
+    );
   }
 
   const parsedPrice = parseFloat(price).toLocaleString("en-GB", {
@@ -13,11 +15,11 @@ const menuItem = ({ id, title, description, price }) => {
   });
 
   return (
-    <div className="menu-item">
-      <div className="menu-item-id">{id}</div>
-      <div className="menu-item-title">{title}</div>
+    <div className={styles.menuItem}>
+      <div className={styles.menuItemId}>{id}</div>
+      <div className={styles.menuItemTitle}>{title}</div>
       {divDescription}
-      <div className="menu-item-price">{parsedPrice}</div>
+      <div className={styles.menuItemPrice}>{parsedPrice}</div>
     </div>
   );
 };

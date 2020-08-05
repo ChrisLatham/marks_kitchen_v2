@@ -1,4 +1,4 @@
-.menu-item {
+.menuItem {
     display: grid;
     grid-template-columns: auto 1fr auto;
     align-items: flex-start;
@@ -7,31 +7,31 @@
     padding: 0 1rem;
     margin-bottom: 1rem;
 }
-.menu-item-id,
-.menu-item-title,
-.menu-item-price {
+.menuItemId,
+.menuItemTitle,
+.menuItemPrice {
     font-weight: bold;
 }
-.menu-item-id,
-.menu-item-title,
-.menu-item-description {
+.menuItemId,
+.menuItemTitle,
+.menuItemDescription {
     text-align: left;
 }
 
-.menu-item-id {
+.menuItemId {
     min-width: 3rem;
     order: 1;
     grid-column: 1/2;
 }
-.menu-item-title {
+.menuItemTitle {
     order: 2;
     grid-column: 2/3;
 }
-.menu-item-description {
+.menuItemDescription {
     order: 4;
     grid-column: 2/3;
 }
-.menu-item-price {
+.menuItemPrice {
     text-align: right;
     order: 3;
     grid-column: 3/4;
