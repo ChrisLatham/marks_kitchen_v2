@@ -2,9 +2,9 @@ import React from "react";
 import "./MenuItem.css";
 
 const menuItem = ({ id, title, description, price }) => {
-  let oDescription = null;
+  let divDescription = null;
   if (description !== "") {
-    oDescription = <div className="menu-item-description">{description}</div>;
+    divDescription = <div className="menu-item-description">{description}</div>;
   }
 
   const parsedPrice = parseFloat(price).toLocaleString("en-GB", {
@@ -16,7 +16,7 @@ const menuItem = ({ id, title, description, price }) => {
     <div className="menu-item">
       <div className="menu-item-id">{id}</div>
       <div className="menu-item-title">{title}</div>
-      {oDescription}
+      {divDescription}
       <div className="menu-item-price">{parsedPrice}</div>
     </div>
   );
